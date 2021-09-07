@@ -1,14 +1,14 @@
 import Navbar from "./Component/Navbar";
 import Home from "./Pages/Home";
-import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
+import {BrowserRouter, BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
 import Error from "./Pages/Error";
 
 function App() {
   return (
     <div className="App">
-      <HashRouter>
-        <Navbar />
+      <BrowserRouter>
         <Switch>
+          <Navbar />
           <Route exact path="/">
             <Home />
           </Route>
@@ -16,7 +16,7 @@ function App() {
             <Error />
           </Route>
         </Switch>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
