@@ -9,7 +9,7 @@ function App() {
       <HashRouter>
         <Navbar />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/Abdul_Alim_portfolio">
             <Home />
           </Route>
           <Route path="*">
