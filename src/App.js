@@ -6,9 +6,9 @@ import Error from "./Pages/Error";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
+        <Navbar />
         <Switch>
-          <Navbar />
           <Route exact path="/">
             <Home />
           </Route>
@@ -16,7 +16,7 @@ function App() {
             <Error />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
