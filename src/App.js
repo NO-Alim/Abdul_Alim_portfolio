@@ -1,12 +1,12 @@
 import Navbar from "./Component/Navbar";
 import Home from "./Pages/Home";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
 import Error from "./Pages/Error";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <HashRouter>
         <Navbar />
         <switch>
           <Route exact path="/">
@@ -16,7 +16,7 @@ function App() {
             <Error />
           </Route>
         </switch>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
