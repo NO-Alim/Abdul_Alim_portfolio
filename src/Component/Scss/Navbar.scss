@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+//colors
+$color-band: #75efff;
+$color-bg: #101c31;
+$color-font: #fff;
+$color-border: #ccc;
+
+
+//media width
+$large: 1100px;
+$ex-medium: 900px;
+$medium: 768px;
+$small: 550px;
+$extraSmall: 450px;
+
+//padding marign
+$pm-15: 150px;
+$pm-10: 100px;
+$pm-8: 80px;
+$pm-6: 60px;
+$pm-5: 50px;
+$pm-4: 40px;
+$pm-2: 20px;
+$pm-1: 10px;
+
+//font
+$monospace: 'Roboto Mono', monospace;;
+$heading-font: 'Roboto', sans-serif;
+$all-font: 'Poppins', sans-serif;
+$liber: 'Libre Baskerville', serif;
+
+$transition: all 0.3s ease-out;
+
+nav{
+    backdrop-filter: blur(3px);
+    overflow: hidden;
+    .nav-container{
+        padding: $pm-1 $pm-4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo-container{
+            a{
+                img{
+                    max-width: 70px;
+                    @media (max-width: $small) {
+                        max-width: 50px;
+                    }
+                }
+            }
+        }
+
+        .link-container{
+            @media (max-width: $medium) {
+                display: none;
+            }
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                li{
+                    margin-left: 20px;
+
+                    a{
+                        font-family: $monospace;
+                        position: relative;
+                        transition: $transition;
+                        &::after{
+                            position: absolute;
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background-color: $color-band;
+                            left: 0;
+                            bottom: -5px;
+                            transition: $transition;
+                            transform: scale(0);
+                        }
+                        &.active{
+                            color: $color-band;
+                            &::after{
+                                transform: scaleY(1);
+                            }
+                        }
+
+                        &:hover{
+                            color: $color-band;
+                            &::after{
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
+                    button{
+                        font-family: $monospace;
+                    }
+                }
+            }
+        }
+
+        .menu-container{
+            display: none;
+            width: 25px;
+            @media screen and (max-width: $medium) {
+                display: block;
+            }
+            .menus{
+                display: flex;
+                flex-direction: column;
+                .menu-bar{
+                    background: $color-font;
+                    width: 30px;
+                    height: 3px;
+                    margin: 3px 0;
+                    transition: all 0.3s ease-in-out;
+                }
+                &.active .menu-bar:first-child{
+                    transform: rotate(-45deg) translate(-9px, 4px);
+                }
+                &.active .menu-bar:nth-child(2){
+                    opacity: 0;
+                }
+                &.active .menu-bar:last-child{
+                    transform: rotate(45deg) translate(-8px, -5px);
+                }
+            }
+        }
+    }
+}
