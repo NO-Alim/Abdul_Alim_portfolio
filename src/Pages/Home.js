@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <div className="home" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <h1 className="h1">Home container</h1>
+            <h1 className="h1">Hello Home container</h1>
             <animated.div className="header-bg-one" style={{ transform: props.xy.interpolate(trans1) }}/>
             <animated.div className="header-bg-two bg-fixed" style={{ transform: props.xy.interpolate(trans2) }}/>
             <animated.div className="header-bg-three bg-fixed" style={{ transform: props.xy.interpolate(trans3) }}/>
