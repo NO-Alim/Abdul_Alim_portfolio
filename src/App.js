@@ -8,14 +8,14 @@ function App() {
     <div className="App">
       <HashRouter>
         <Navbar />
-        <switch>
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
           <Route path="*">
             <Error />
           </Route>
-        </switch>
+        </Switch>
       </HashRouter>
     </div>
   );
