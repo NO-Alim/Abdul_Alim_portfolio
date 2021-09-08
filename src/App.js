@@ -1,6 +1,6 @@
 import Navbar from "./Component/Navbar";
 import Home from "./Pages/Home";
-import {BrowserRouter, BrowserRouter as Router, HashRouter, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import Error from "./Pages/Error";
 import About from "./Component/About";
 
