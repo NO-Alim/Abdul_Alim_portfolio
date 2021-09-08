@@ -43,6 +43,9 @@ nav{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media (max-width: $small) {
+            padding: $pm-1 $pm-2;
+        }
 
         .logo-container{
             a{

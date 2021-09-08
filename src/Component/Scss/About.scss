@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+//colors
+$color-band: #75efff;
+$color-bg: #101c31;
+$color-font: #fff;
+$color-border: #ccc;
+
+
+//media width
+$large: 1100px;
+$ex-medium: 900px;
+$medium: 768px;
+$small: 550px;
+$extraSmall: 450px;
+
+//padding marign
+$pm-15: 150px;
+$pm-10: 100px;
+$pm-8: 80px;
+$pm-6: 60px;
+$pm-5: 50px;
+$pm-4: 40px;
+$pm-2: 20px;
+$pm-1: 10px;
+
+//font
+$monospace: 'Roboto Mono', monospace;;
+$heading-font: 'Roboto', sans-serif;
+$all-font: 'Poppins', sans-serif;
+$liber: 'Libre Baskerville', serif;
+
+$transition: all 0.3s ease-out;
+
+.about-container{
+    .flex-container{
+        display: flex;
+        @media (max-width: $ex-medium) {
+            flex-direction: column;
+        }
+        .flex-item{
+            flex: 1;
+
+            h5,p{
+                margin-bottom: 20px;
+            }
+            h5{
+                font-weight: 300;
+            }
+            p{
+                font-weight: 300;
+            }
+
+            &.item-one{
+                @media (max-width: $ex-medium) {
+                    order: 2;
+                }
+                .flex-container{
+                    flex-direction: row;
+                    @media (max-width: $small) {
+                        flex-direction: column;
+                    }
+                    .flex-item{
+                        &.item-one{
+                            order: 1;
+                        }
+                        &.item-two{
+                            order: 2;
+                        }
+                        li{
+                            margin-bottom: 10px;
+                            span{
+                                color: $color-band;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.item-two{
+                flex: 0.7;
+                margin-left: 50px;
+                @media (max-width: $ex-medium) {
+                    margin-left: 0;
+                    margin-bottom: 30px;
+                }
+                .img-container{
+                    width: 100%;
+                    height: 100%;
+                    .img{
+                        position: relative;
+                        max-width: 300px;
+                        margin: 0 auto;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        @media (max-width: $ex-medium) {
+                            margin: 0;
+                        }
+                        &:hover{
+                            .img-content{
+                                &::after{
+                                    top: -200%;
+                                    transform: rotate(-45deg) scaleX(1);
+                                }
+
+                                .content{
+                                    //transform: scaleY(1);
+                                    opacity: 1;
+                                }
+                            }
+                            
+                        }
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            transition: $transition;
+                        }
+
+                        .img-content{
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            background-color: rgba($color-bg, $alpha: 0.4);
+                            padding: 30px;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            transition: $transition;
+
+                            &::after{
+                                content: '';
+                                position: absolute;
+                                width: 300px;
+                                height: 200%;
+                                background-color: rgba($color-font, $alpha: 0.5);
+                                top: 100%;
+                                transform: rotate(-45deg) scaleX(0.5);
+                                transition: all 0.5s ease-in-out;
+                            }
+                            .content{
+                                display: inline-block;
+                                text-align: right;
+                                padding-right: 10px;
+                                position: relative;
+                                opacity: 0;
+                                transition: all 0.5s ease-in-out;
+                                //transform: scaleY(0);
+                                &::after{
+                                    content: '';
+                                    position: absolute;
+                                    width: 3px;
+                                    height: 100%;
+                                    background-color: $color-font;
+                                    top: 0;
+                                    right: 0px;
+                                }
+
+                                h6{
+                                    font-size: 16px;
+                                    line-height: 130%;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

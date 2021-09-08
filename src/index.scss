@@ -92,9 +92,12 @@ body{
     letter-spacing: 1px;
   }
   p,a,span,strong{
-    line-height: 100%;
+    line-height: 130%;
     font-size: 16px;
     letter-spacing: 0.8px;
+  }
+  p{
+    color: $color-border;
   }
 
   .heading{
@@ -102,6 +105,7 @@ body{
     font-family: 'Roboto', sans-serif;
     letter-spacing: 6px;
     font-weight: 900;
+    line-height: 140%;
     @media (max-width: $small) {
         font-size: $h1;
         letter-spacing: 2px;
@@ -111,6 +115,7 @@ body{
   .h1{
     font-size: $h1;
     letter-spacing: 1.5px;
+    line-height: 120%;
     @media (max-width: $small) {
       font-size: $h2;
     }
@@ -118,6 +123,7 @@ body{
   .h2{
     font-size: $h2;
     letter-spacing: 1.3px;
+    line-height: 120%;
     @media (max-width: $small) {
       font-size: $h3;
     }
@@ -125,6 +131,7 @@ body{
   .h3{
     font-size: $h3;
     letter-spacing: 1.2px;
+    line-height: 120%;
     @media (max-width: $small) {
       font-size: $h4;
     }
@@ -132,6 +139,7 @@ body{
   .h4{
     font-size: $h4;
     letter-spacing: 1.1px;
+    line-height: 120%;
     @media (max-width: $small) {
       font-size: $h5;
     }
@@ -139,16 +147,33 @@ body{
   .h5{
     font-size: $h5;
     letter-spacing: 1px;
+    line-height: 120%;
     @media (max-width: $small) {
       font-size: 18px;
     }
   }
   .title{
-    //font-family: '';
+    font-family: $liber;
     font-size: $h2;
     letter-spacing: 1.3px;
+    margin-bottom: 50px;
+    position: relative;
+    color: $color-band;
+    display: inline-block;
+    line-height: 120%;
+    &::after{
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: $color-band;
+      top: 50%;
+      right: -70px;
+      transform: translateY(-50%);
+    }
     @media (max-width: $small) {
       font-size: $h3;
+      margin-bottom: 30px;
     }
   }
   .sub-title{
