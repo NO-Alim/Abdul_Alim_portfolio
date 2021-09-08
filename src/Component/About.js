@@ -15,7 +15,7 @@ const About = () => {
                         <h5 className="h5">Hi, I'm Abdul Alim. I'm A Multi-Talented Human With Few Years Of Experiences In Front-End-Design.I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h5>
                         <p>I Spent The Last Four Years Working As A Front-End-Designer. I Acquired Project And Time Management Skills, As Well As The Ability To Communicate With Team Members And Clients While Effectively Meeting Milestones And Deadlines.I Have Worked On Multiple Of Responsive Web Design Projects Using (Photoshop, Illustrator) And Development (HTML, CSS, Scss, JS, React, Redux Etc.).</p>
                         <p>I Am Currently Working From Bangladesh. I Am Always Available To Discuss Your Project Over The Phone Or Via Whatsapp. These Days I Enjoy Spending My Free Time Photography, Traveling And Watching Movie.</p>
-                        <h5 className="h5">Here Are A Few Technologies I've Been Working With Recently :</h5>
+                        <p style={{color: '#fff', fontWeight: '400'}}>Here Are A Few Technologies I've Been Working With Recently :</p>
                         <div className="technology-list flex-container">
                             <div className="flex-item item-one">
                                 <li><span><FaHtml5/></span> HTML5</li>
