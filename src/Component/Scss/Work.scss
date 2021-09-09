@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@0;1&display=swap');
+//colors
+$color-band: #75efff;
+$color-bg: #101c31;
+$color-font: #fff;
+$color-border: #ccc;
+
+
+//media width
+$large: 1100px;
+$ex-medium: 900px;
+$medium: 768px;
+$small: 550px;
+$extraSmall: 450px;
+
+//padding marign
+$pm-15: 150px;
+$pm-10: 100px;
+$pm-8: 80px;
+$pm-6: 60px;
+$pm-5: 50px;
+$pm-4: 40px;
+$pm-2: 20px;
+$pm-1: 10px;
+
+//font
+$monospace: 'Roboto Mono', monospace;;
+$heading-font: 'Roboto', sans-serif;
+$all-font: 'Poppins', sans-serif;
+$liber: 'Libre Baskerville', serif;
+
+$transition: all 0.3s ease-out;
+
+
+
+.work-container{
+    .main-projects{
+        .project-item{
+            margin-bottom: 50px;
+            h3{
+                font-family: $heading-font;
+                margin-bottom: 20px;
+            }
+
+            .img-container{
+                position: relative;
+                border-radius: 10px;
+                overflow: hidden;
+                border: 1px solid $color-band;
+
+                &:hover{
+                    img{
+                        opacity: 0.7;
+                        transform: scale(1.1);
+                    }
+                }
+                img{
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0.5;
+                    transition: $transition;
+                }
+                .project-content{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba($color-bg, $alpha: 0.4);
+                    padding: 50px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    @media (max-width: $medium) {
+                        position: static;
+                        padding: 10px;
+                    }
+
+                    p{
+                        margin-bottom: 20px;
+                        color: $color-font;
+                        font-weight: lighter;
+                        background-color: $color-bg;
+                        padding: 20px;
+                        border-left: 3px solid $color-band;
+                        border-right: 3px solid $color-band;
+                        @media (max-width: $medium) {
+                            padding: 0;
+                            border: none;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
+                        a{
+                            text-transform: lowercase;
+                            color: $color-band;
+                            text-decoration: underline;
+                        }
+                    }
+                    .tools{
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        @media (max-width: $medium) {
+                            margin-bottom: 10px;
+                        }
+
+                        span{
+                            margin-right: 20px;
+                            color: $color-band;
+                        }
+                    }
+                    .links{
+                        display: flex;
+                        align-items: flex-start;
+                        a{
+                            width: 50px;
+                            height: 50px;
+                            border-bottom-left-radius: 10px;
+                            border-top-right-radius: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: rgba($color-band, $alpha: 0.7);
+                            margin-right: 20px;
+                            font-size: 25px;
+                            transform: scale(1);
+                            transition: $transition;
+                            cursor: pointer;
+                            color: #fff;
+                            &:hover{
+                                //transform: scale(1.2);
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
