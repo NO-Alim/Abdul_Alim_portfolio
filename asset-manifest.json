@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/Abdul_Alim_portfolio/static/css/main.c3a7b423.chunk.css",
-    "main.js": "/Abdul_Alim_portfolio/static/js/main.e3dba28b.chunk.js",
-    "main.js.map": "/Abdul_Alim_portfolio/static/js/main.e3dba28b.chunk.js.map",
+    "main.css": "/Abdul_Alim_portfolio/static/css/main.53bd4a6f.chunk.css",
+    "main.js": "/Abdul_Alim_portfolio/static/js/main.fb25456e.chunk.js",
+    "main.js.map": "/Abdul_Alim_portfolio/static/js/main.fb25456e.chunk.js.map",
     "runtime-main.js": "/Abdul_Alim_portfolio/static/js/runtime-main.25a8cb50.js",
     "runtime-main.js.map": "/Abdul_Alim_portfolio/static/js/runtime-main.25a8cb50.js.map",
-    "static/js/2.ea6b19f6.chunk.js": "/Abdul_Alim_portfolio/static/js/2.ea6b19f6.chunk.js",
-    "static/js/2.ea6b19f6.chunk.js.map": "/Abdul_Alim_portfolio/static/js/2.ea6b19f6.chunk.js.map",
+    "static/js/2.8261db06.chunk.js": "/Abdul_Alim_portfolio/static/js/2.8261db06.chunk.js",
+    "static/js/2.8261db06.chunk.js.map": "/Abdul_Alim_portfolio/static/js/2.8261db06.chunk.js.map",
     "index.html": "/Abdul_Alim_portfolio/index.html",
-    "static/css/main.c3a7b423.chunk.css.map": "/Abdul_Alim_portfolio/static/css/main.c3a7b423.chunk.css.map",
-    "static/js/2.ea6b19f6.chunk.js.LICENSE.txt": "/Abdul_Alim_portfolio/static/js/2.ea6b19f6.chunk.js.LICENSE.txt",
+    "static/css/main.53bd4a6f.chunk.css.map": "/Abdul_Alim_portfolio/static/css/main.53bd4a6f.chunk.css.map",
+    "static/js/2.8261db06.chunk.js.LICENSE.txt": "/Abdul_Alim_portfolio/static/js/2.8261db06.chunk.js.LICENSE.txt",
+    "static/media/Food-Blog.c49804b9.png": "/Abdul_Alim_portfolio/static/media/Food-Blog.c49804b9.png",
     "static/media/alim.59d686bc.jpg": "/Abdul_Alim_portfolio/static/media/alim.59d686bc.jpg",
-    "static/media/logo.91242d60.png": "/Abdul_Alim_portfolio/static/media/logo.91242d60.png"
+    "static/media/fitness.aecc87b1.png": "/Abdul_Alim_portfolio/static/media/fitness.aecc87b1.png",
+    "static/media/foodcommerce.81b07c28.png": "/Abdul_Alim_portfolio/static/media/foodcommerce.81b07c28.png",
+    "static/media/jurnalist.b7bf029a.png": "/Abdul_Alim_portfolio/static/media/jurnalist.b7bf029a.png",
+    "static/media/kallas.08869028.png": "/Abdul_Alim_portfolio/static/media/kallas.08869028.png",
+    "static/media/logo.91242d60.png": "/Abdul_Alim_portfolio/static/media/logo.91242d60.png",
+    "static/media/pretty-gal.a24255d9.png": "/Abdul_Alim_portfolio/static/media/pretty-gal.a24255d9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.25a8cb50.js",
-    "static/js/2.ea6b19f6.chunk.js",
-    "static/css/main.c3a7b423.chunk.css",
-    "static/js/main.e3dba28b.chunk.js"
+    "static/js/2.8261db06.chunk.js",
+    "static/css/main.53bd4a6f.chunk.css",
+    "static/js/main.fb25456e.chunk.js"
   ]
 }
