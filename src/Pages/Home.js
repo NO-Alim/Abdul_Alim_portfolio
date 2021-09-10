@@ -6,6 +6,7 @@ import Work from '../Component/Work'
 import Experience from '../Component/Experience'
 import About from '../Component/About'
 import Header from '../Component/Header'
+import {Element} from 'react-scroll'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
@@ -18,11 +19,21 @@ const Home = () => {
 
     return (
         <div className="home" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Header />
-            <About />
-            <Experience />
-            <Work />
-            <Contact />
+            <Element name='header'>
+                <Header />
+            </Element>
+            <Element name='about'>
+                <About />
+            </Element>
+            <Element name='experinence'>
+                <Experience />
+            </Element>
+            <Element name='work'>
+                <Work />
+            </Element>
+            <Element name='contact'>
+                <Contact />
+            </Element>
             <animated.div className="header-bg-one" style={{ transform: props.xy.interpolate(trans1) }}/>
             <animated.div className="header-bg-two bg-fixed" style={{ transform: props.xy.interpolate(trans2) }}/>
             <animated.div className="header-bg-three bg-fixed" style={{ transform: props.xy.interpolate(trans3) }}/>

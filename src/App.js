@@ -3,6 +3,10 @@ import Home from "./Pages/Home";
 import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 import Error from "./Pages/Error";
 import About from "./Component/About";
+import Footer from "./Component/Footer";
+import TopBtn from "./Component/TopBtn";
+import Social from "./Component/Social";
+import SideScroller from "./Component/SideScroller";
 
 function App() {
   return (
@@ -20,6 +24,10 @@ function App() {
             <Error />
           </Route>
         </Switch>
+        <Footer />
+        <TopBtn />
+        <Social />
+        <SideScroller />
       </Router>
     </div>
   );

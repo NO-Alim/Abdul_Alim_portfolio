@@ -35,23 +35,36 @@ $liber: 'Libre Baskerville', serif;
 
 $transition: all 0.3s ease-out;
 
-.header-container{
-    .header{
-        max-width: 700px;
-        h5{
-            margin: 20px 0;
-            font-family: $monospace;
-            color: $color-band;
-        }
-        h1{
-            margin-bottom: 20px;
-        }
-        h3{
-            font-weight: lighter;
-        }
-        a{
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
+
+
+
+
+.topBtn{
+    position: fixed;
+    bottom: -40px;
+    right: 50px;
+    transition: all 0.3s ease-in-out;
+
+    @media (max-width: $medium) {
+      right: 20px;
     }
-}
+
+    @media (max-width: $extraSmall) {
+      right: 10px;
+    }
+  }
+  
+  .scroll-top{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 13px -7px #000000;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background: $color-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+//M 11 5 L 3 5 L 7 -2 L 11 5 L 9 5 L 7 1 L 9 5 L 7 1 L 5 5

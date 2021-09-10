@@ -35,23 +35,39 @@ $liber: 'Libre Baskerville', serif;
 
 $transition: all 0.3s ease-out;
 
-.header-container{
-    .header{
-        max-width: 700px;
-        h5{
-            margin: 20px 0;
-            font-family: $monospace;
-            color: $color-band;
+.footer-container{
+    text-align: center;
+    
+    &.section-container{
+        padding: $pm-2 0;
+    }
+
+    .footer-social{
+        margin-bottom: $pm-2;
+        ul{
+            width: 150px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li{
+                list-style: none;
+                a{
+                    display: block;
+                    font-size: 25px;
+                    transform: scale(1);
+                    transition: $transition;
+                    &:hover{
+                        transform: scale(1.2);
+                        color: $color-band;
+                    }
+                }
+            }
         }
-        h1{
-            margin-bottom: 20px;
-        }
-        h3{
-            font-weight: lighter;
-        }
-        a{
-            margin-top: 40px;
-            margin-bottom: 20px;
-        }
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        color: $color-border;
+        font-weight: lighter;
     }
 }

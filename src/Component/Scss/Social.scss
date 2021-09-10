@@ -35,23 +35,50 @@ $liber: 'Libre Baskerville', serif;
 
 $transition: all 0.3s ease-out;
 
-.header-container{
-    .header{
-        max-width: 700px;
-        h5{
-            margin: 20px 0;
-            font-family: $monospace;
-            color: $color-band;
+
+
+
+.fixed-social{
+    position: fixed;
+    bottom: 200px;
+    left: 50px;
+    background-color: transparent;
+    padding: 5px;
+    @media (max-width: $medium) {
+        display: none;
+    }
+    .social-container{
+        position: relative;
+        &::after{
+            content: '';
+            width: 1px;
+            height: 210px;
+            background-color: $color-border;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
-        h1{
-            margin-bottom: 20px;
-        }
-        h3{
-            font-weight: lighter;
+    }
+    li{
+        list-style: none;
+        margin: 20px 0;
+        width: 22px;
+        height: 30px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover{
+            a{
+                margin-bottom: 5px;
+                color: $color-band;
+            }
         }
         a{
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-style: 25px;
+            transition: $transition;
+            color: $color-border;
         }
     }
 }
