@@ -36,7 +36,8 @@ $liber: 'Libre Baskerville', serif;
 $transition: all 0.3s ease-out;
 
 nav{
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(10px);
+    background-color: rgba($color-bg, $alpha: 0.8);
     overflow: hidden;
     .nav-container{
         padding: $pm-1 $pm-4;
@@ -115,14 +116,21 @@ nav{
                 display: block;
             }
             .menus{
+                width: 30px;
                 display: flex;
                 flex-direction: column;
+                align-items: flex-end;
+
                 .menu-bar{
                     background: $color-font;
                     width: 30px;
                     height: 3px;
                     margin: 3px 0;
                     transition: all 0.3s ease-in-out;
+
+                    &:nth-child(2){
+                        width: 25px;
+                    }
                 }
                 &.active .menu-bar:first-child{
                     transform: rotate(-45deg) translate(-9px, 4px);
@@ -149,12 +157,11 @@ nav{
     width: auto;
     min-width: 350px;
     @media (max-width: $extraSmall) {
-        min-width: 300px;
+        min-width: 280px;
     }
     .drawer-btn-container{
         display: flex;
         justify-content: flex-end;
-    
         .close-btn{
             background-color: transparent;
             padding: 10px 15px;

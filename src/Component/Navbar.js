@@ -33,7 +33,6 @@ const Navbar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false)
     const menuBtnRef = useRef(null);
     const menuRef = useRef(null);
-    const navRef = useRef(null);
     
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen)
@@ -55,7 +54,11 @@ const Navbar = () => {
     }
 
     const handleClick = (e) => {
-        console.log(e);
+        if (!menuBtnRef.current.contains(e.target)) {
+            if (!menuRef.current.contains(e.target)) {
+                setDrawerOpen(false);
+            }
+        }
     }
 
     useEffect(() => {
@@ -116,8 +119,8 @@ const Navbar = () => {
             variant="persistent"
             open={drawerOpen}
             anchor="left"
-            classes={{paper: classes.drawerPaper}}>
-                <div className="drawer-container" ref={menuRef}>
+            classes={{paper: classes.drawerPaper}} ref={menuRef}>
+                <div className="drawer-container">
                     <div className="drawer-btn-container">
                         <button onClick={() => setDrawerOpen(false)} className="close-btn"><FaTimes /></button>
                     </div>

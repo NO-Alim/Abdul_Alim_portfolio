@@ -1,5 +1,6 @@
 import React from 'react'
 import './Scss/Header.scss'
+import {Link as ScrollLink} from 'react-scroll'
 
 const Header = () => {
     return (
@@ -10,6 +11,17 @@ const Header = () => {
                     <h1 className="heading">Abdul Alim</h1>
                     <h3 className="h3">I Help Designers, Small Agencies And Businesses Bring Their Ideas To Life.</h3>
                     <a className="btn-btn" href="mailto:abdulalimrakib53@gmail.com">Let's Talk</a>
+                </div>
+                <div className="scroll-prompt">
+                <ScrollLink to="about" spy={true} smooth={true} offset={0} duration={500}>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="39.5" height="40" viewBox="0 0 39.5 40">
+                            <path class="line-1" fill="none" stroke="#75efff" stroke-miterlimit="10" d="M39.3 16.4L19.8 28.9.3 16.4"/>
+                            <path class="line-2" fill="none" stroke="#75efff" stroke-miterlimit="10" d="M32.3 8.4l-12.5 8-12.5-8"/>
+                            <path class="line-3" fill="none" stroke="#75efff" stroke-miterlimit="10" d="M25.5.4l-5.7 3.7L14.1.4"/>
+                        </svg>
+                    </span>
+                </ScrollLink>
                 </div>
             </div>   
         </>

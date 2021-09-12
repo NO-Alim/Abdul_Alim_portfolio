@@ -7,12 +7,14 @@ import Footer from "./Component/Footer";
 import TopBtn from "./Component/TopBtn";
 import Social from "./Component/Social";
 import SideScroller from "./Component/SideScroller";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
+        <ScrollToTop />
         <Switch>
           <Route exact path="/">
             <Home />
