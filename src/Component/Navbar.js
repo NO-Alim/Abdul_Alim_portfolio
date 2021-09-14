@@ -87,7 +87,7 @@ const Navbar = () => {
                     <div className="link-container">
                         <ul>
                             <li>
-                            <ScrollLink to="header" spy={true} smooth={true} offset={0} duration={500}>Home</ScrollLink>
+                            <ScrollLink to="header" spy={true} smooth={true} offset={-100} duration={500}>Home</ScrollLink>
                             </li>
                             <li>
                             <ScrollLink to="about" spy={true} smooth={true} offset={0} duration={500}>About</ScrollLink>
