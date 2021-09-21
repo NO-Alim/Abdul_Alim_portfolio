@@ -169,6 +169,7 @@ $transition: all 0.3s ease-out;
                 grid-gap: 20px;
 
                 .img-container{
+                    border: 1px solid $color-band;
                     border-radius: 10px;
                     overflow: hidden;
                     .img{
@@ -193,7 +194,7 @@ $transition: all 0.3s ease-out;
                             height: 100%;
                             top: 0;
                             left: 0;
-                            background-color: rgba($color-bg, $alpha: 0.8);
+                            background-color: rgba($color-bg, $alpha: 0.4);
                             display: flex;
                             align-items: center;
                             justify-content: center;

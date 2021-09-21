@@ -8,8 +8,28 @@ import TopBtn from "./Component/TopBtn";
 import Social from "./Component/Social";
 import SideScroller from "./Component/SideScroller";
 import ScrollToTop from "./ScrollToTop";
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() =>{
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 2000);
+  })
+  if (isLoading) {
+    return(
+      <div className="loader-container">
+        <div className="loader">
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="App">
       <Router>
